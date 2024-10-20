@@ -1,29 +1,92 @@
-*{
+body {
+  background-color: #111; /* Darker background */
+  color: #39ff14;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   border: 0;
   outline: 0;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-.demo{
-  min-height: 100vh;
-  background: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 10em;
-  gap: 5em;
-  .calculator-wrapper{
-    border-radius: 1em;
-    padding: 5em;
-    box-shadow: 0 0 10px #fff;
+.page {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #39ff14;
+  padding: 20px;
+
+  input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 10px; /* Adjusted spacing between inputs */
+    border: 1px solid #888;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #333;
+    color: #39ff14;
+    box-shadow: 0 0 10px #39ff14;
+    transition: box-shadow 0.3s;
+
+    &:focus {
+      box-shadow: 0 0 25px #39ff14;
+    }
   }
 
+  .demo {
+    background-color: #1a1a1a;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border-radius: 10px;
+    margin-top: 20px;
+
+    .calculator-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 30px;
+      gap: 20px;
+    }
+
+    .workerCard {
+      background-color: #2b2b2b;
+      border: 1px solid #444;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      width: 200px;
+      height: 270px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #39ff14;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #00cfff;
+
+        &:first-of-type {
+          color: #39ff14;
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }
